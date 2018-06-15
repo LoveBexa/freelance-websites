@@ -1,0 +1,68 @@
+/* SCSS/SASS Code by BECKY LIU */
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+$main-font:'Source Sans Pro', Helvetica, Arial, sans-serif;
+$fixed-font-size: 25px;
+
+$main-dark-color:#191A14;
+$main-font-light:#ffffff;
+
+$thick-border: 7px solid $main-dark-color;
+
+
+// SEPARATE MIXIN FILE WHEN READY 
+
+@mixin background-size($style) {
+    -webkit-background-size: $style;
+       -moz-background-size: $style;
+        -ms-background-size: $style;
+        -o-background-size: $style;
+  }
+
+
+// START CSS HERE
+
+html, body {
+    font-family: 100% $main-font;
+    font-size: $fixed-font-size;
+    margin:0;
+    padding:0;
+    height: 100%;
+}
+
+.wrapper{
+    border : 2px solid #000; 
+    overflow:hidden;
+}
+
+ header {
+    font-family: 100% $main-font;
+    color:$main-dark-color;
+    min-height: 200px;
+    margin:0;
+    padding:0;
+ 
+    .image{
+        background: url('images/header.jpg')no-repeat center center fixed; 
+        @include background-size(cover);
+        height: 100%; 
+        width:50%;
+        float:left;
+        }
+    
+    .content {
+        width:50%;
+        height:100%;
+        overflow:auto;
+        right:0px;
+        bottom:0px;
+        float:left;
+        background:$main-dark-color;
+        color:$main-font-light;
+        
+    }
+
+}
+
+/* END OF SCSS/SASS Code by BECKY LIU */

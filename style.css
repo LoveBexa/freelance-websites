@@ -1,0 +1,46 @@
+/* SCSS/SASS Code by BECKY LIU */
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+html, body {
+  font-family: 100% "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.wrapper {
+  border: 2px solid #000;
+  overflow: hidden;
+}
+
+header {
+  font-family: 100% "Source Sans Pro", Helvetica, Arial, sans-serif;
+  color: #191A14;
+  min-height: 200px;
+  margin: 0;
+  padding: 0;
+}
+header .image {
+  background: url("images/header.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  height: 100%;
+  width: 50%;
+  float: left;
+}
+header .content {
+  width: 50%;
+  height: 100%;
+  overflow: auto;
+  right: 0px;
+  bottom: 0px;
+  float: left;
+  background: #191A14;
+  color: #ffffff;
+}
+
+/* END OF SCSS/SASS Code by BECKY LIU */
+
+/*# sourceMappingURL=style.css.map */
