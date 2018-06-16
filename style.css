@@ -1,54 +1,163 @@
 /* 
 START OF STYLESHEET (Written by Beckyliu.com)
 */
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,700");
 html, body {
   font-family: "Source Sans Pro", Helvetica, Verdana, sans-serif;
-  font-weight: 400;
-  font-size: 25px;
+  font-weight: 200;
+  font-size: 30px;
+  color: #1f201a;
+  background-color: #ffffff;
   margin: 0;
   padding: 0;
+  width: 100%;
   height: 100%;
 }
 
+a {
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
 .wrapper {
-  border: 0px solid #000;
-  width: 100%;
+  width: 80%;
+  overflow: hidden;
+  margin: auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 header {
-  color: #191A14;
-  min-height: 200px;
+  background-color: #1f201a;
+  color: #ffffff;
+  padding: 2%;
   margin: 0;
-  padding: 0;
+  min-height: 8%;
+}
+header a {
+  color: #ffffff;
+  font-weight: 200;
+  font-size: 15px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+header li {
+  float: right;
+  display: inline;
+  padding: 2%;
+}
+header #logo {
   float: left;
 }
-header .headerImage {
-  background: url("images/header.jpg") no-repeat center center;
+header #logo h1 {
+  margin: 0;
+}
+header nav {
+  margin-top: 3%;
+  margin-right: 3%;
+  position: relative;
+}
+header nav a, header nav a:active, header nav a:link, header nav a:visited {
+  letter-spacing: 10px;
+}
+header nav a:hover {
+  color: #BA0707;
+}
+
+section {
+  text-align: center;
+  width: 100%;
+}
+
+#headerImage {
+  background: #1f201a url("images/header.jpg") no-repeat left center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
   -o-background-size: cover;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  vertical-align: center;
+}
+#headerImage #logo {
+  padding: 3%;
+}
+#headerImage .sichuan {
+  width: 50%;
+  float: left;
+  min-height: 80%;
+}
+#headerImage .leftContent {
+  float: right;
+  color: #ffffff;
+  text-align: center;
+  width: 35%;
+  padding: 4%;
 }
 
-/* 
-  DESKTOP (1281px to Higher Reso)
-*/
-/* 
-  LAPTOPS/DESKTOPS (1025px to 1280px)
-*/
-/* 
-  TABLETS/IPAD PORATRAIT (768px to 1024px)
-*/
-/* 
-  TABLES/IPADS LANDSCAPE (768px to 1024px)
-*/
-/* 
-  LOW RES TABLET/MOBILE LANDSCAPE (481px to 767px)
-*/
-/* 
-  PORTRAIT MOST SMART PHONES (320px to 479px)
-*/
+.button {
+  border: 3px solid #BA0707;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 15px;
+  width: 280px;
+  padding: 10px 5px 10px 5px;
+  margin: 4% auto 2% auto;
+}
+.button a, .button a:active, .button a:link, .button a:visited {
+  display: block;
+}
+
+#address {
+  margin: auto;
+  padding: 20 4 20 0;
+  background-color: #BA0707;
+  color: #ffffff;
+}
+
+#introduction {
+  margin: 5% auto 5% auto;
+  text-align: center;
+  border: 2px solid black;
+}
+#introduction .introCopy {
+  width: 80%;
+  text-align: center;
+}
+#introduction .icon1 {
+  display: inline-block;
+  width: 26.6666666667%;
+  border: 2px solid blue;
+}
+#introduction .icon2, #introduction .icon3 {
+  float: left;
+  width: 26.6666666667%;
+  border: 2px solid blue;
+}
+
+#bookingCopy {
+  background-color: #EDEDED;
+  width: 100%;
+  padding: 5% 0 5% 0;
+}
+
+#emailForm input, #emailForm textarea {
+  padding: 4px;
+  width: 250px;
+  margin-top: 1%;
+  border: 3px solid #BA0707;
+}
+
+footer {
+  font-size: 20px;
+}
+
 /* 
 END OFF STYLESHEET (Written by Beckyliu.com)
 */
