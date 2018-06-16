@@ -1,9 +1,16 @@
-/* SCSS/SASS Code by BECKY LIU */
+/* 
+START OF STYLESHEET (Written by Beckyliu.com)
+*/
 
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
-$main-font:'Source Sans Pro', Helvetica, Arial, sans-serif;
+$main-font:"Source Sans Pro", Helvetica, Verdana, sans-serif;
 $fixed-font-size: 25px;
+
+$light: 300;
+$normal: 400;
+$semibold: 500;
+$bold: 700;
 
 $main-dark-color:#191A14;
 $main-font-light:#ffffff;
@@ -24,7 +31,8 @@ $thick-border: 7px solid $main-dark-color;
 // START CSS HERE
 
 html, body {
-    font-family: 100% $main-font;
+    font-family: $main-font;
+    font-weight: $normal;
     font-size: $fixed-font-size;
     margin:0;
     padding:0;
@@ -34,21 +42,20 @@ html, body {
 .wrapper{
     border : 2px solid #000; 
     overflow:hidden;
+    width:100%;
+    height:200px;
 }
 
  header {
-    font-family: 100% $main-font;
     color:$main-dark-color;
     min-height: 200px;
     margin:0;
     padding:0;
+    float:left;
  
     .image{
-        background: url('images/header.jpg')no-repeat center center fixed; 
+        background: url('images/header.jpg')no-repeat center center; 
         @include background-size(cover);
-        height: 100%; 
-        width:50%;
-        float:left;
         }
     
     .content {
@@ -57,7 +64,6 @@ html, body {
         overflow:auto;
         right:0px;
         bottom:0px;
-        float:left;
         background:$main-dark-color;
         color:$main-font-light;
         
@@ -65,4 +71,63 @@ html, body {
 
 }
 
-/* END OF SCSS/SASS Code by BECKY LIU */
+/* 
+  DESKTOP (1281px to Higher Reso)
+*/
+
+@media (min-width: 1281px) {
+  
+    //CSS
+    
+  }
+  
+  /* 
+    LAPTOPS/DESKTOPS (1025px to 1280px)
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    
+    //CSS
+    
+  }
+  
+  /* 
+    TABLETS/IPAD PORATRAIT (768px to 1024px)
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+    //CSS
+    
+  }
+  
+  /* 
+    TABLES/IPADS LANDSCAPE (768px to 1024px)
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    //CSS
+    
+  }
+  
+  /* 
+    LOW RES TABLET/MOBILE LANDSCAPE (481px to 767px)
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    
+
+  }
+  
+  /* 
+    PORTRAIT MOST SMART PHONES (320px to 479px)
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+  }
+
+/* 
+END OFF STYLESHEET (Written by Beckyliu.com)
+*/
