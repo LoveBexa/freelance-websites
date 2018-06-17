@@ -4,19 +4,21 @@ START OF STYLESHEET (Written by Beckyliu.com)
 
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,700');
 
+
 $main-font:"Source Sans Pro", Helvetica, Verdana, sans-serif;
-$fixed-font-size: 30px;
+$fixed-font-size: 20px;
 
 $light: 200;
-$normal: 400;
+$normal: 300;
 $semibold: 500;
 $bold: 700;
 
-$grey-background:#EDEDED;
+$grey-background:#F4F4F4;
 
 $main-colour-dark:#1f201a;
 $main-colour-light:#ffffff;
 $link-colour: #BA0707;
+$button-hover-bg: #620404;
 
 $a-tags: 'a, a:active, a:link, a:visited';
 
@@ -24,6 +26,17 @@ $button-border: 3px solid $link-colour;
 $thick-border: 7px solid $main-colour-dark;
 
 $wrapper-width: 80%;
+
+
+$min-mobile-width: 320px;
+$max-mobile-width: 480px;
+
+$min-ipad-portrait:768px; 
+$max-ipad-width: 1024px;
+
+$max-desktop-width: 1280px;
+
+
 
 // SEPARATE MIXIN FILE WHEN READY 
 
@@ -34,12 +47,20 @@ $wrapper-width: 80%;
         -o-background-size: $style;
   }
 
+  @mixin vertical-align($position: relative) {
+    position: $position;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
 
 // START CSS HERE
 
 html, body {
     font-family: $main-font;
-    font-weight: $light;
+    font-weight: $normal;
     font-size: $fixed-font-size;
     color:$main-colour-dark;
     background-color: $main-colour-light;
@@ -47,11 +68,22 @@ html, body {
     padding:0;
     width:100%;
     height:100%;
+    letter-spacing: 0px;
 }
 
-a {
+#{$a-tags} {
+  color: $main-colour-dark;
+  font-family: $main-font;
+  font-size: $fixed-font-size;
+  border-bottom:3px solid $link-colour;
   text-decoration: none;
-  letter-spacing:2px;
+  letter-spacing: 0px;
+
+&:hover {
+
+  transition: all 0.4s linear;
+  border-color: $main-colour-light;
+  }
 }
 
 
@@ -61,10 +93,23 @@ a {
     margin: auto;
 }
 
-ul{
-  margin:0;
-  padding:0;
+
+h1 {
+  font-family: $main-font;
 }
+
+h2 {
+  font-weight: $semibold;
+  font-size: $fixed-font-size * 1.2;
+}
+
+h5 {
+  text-transform: uppercase;
+  font-size: $fixed-font-size * 0.9;
+  font-weight: $semibold;
+  letter-spacing: 1px;
+}
+
 
 header {
 background-color: $main-colour-dark;
@@ -72,21 +117,7 @@ color:$main-colour-light;
 padding:2%;
 margin: 0;
 min-height: 8%;
-
-a {
-  color: $main-colour-light;
-  font-weight:$light;
-  font-size: $fixed-font-size / 2;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  text-decoration: none;
-}
-
-li {
-  float: right;
-  display: inline;
-  padding: 2%;
-}
+font-size: $fixed-font-size * 1.2;
 
 #logo {
   float: left;
@@ -95,21 +126,45 @@ h1 {
 }
 }
 
-nav{
-  margin-top:3%;
-  margin-right: 3%;
-  position: relative;
 
+nav{
+  margin:auto;
+  position: relative;
+  width:100%;
+  height:50px;
+
+ul{
+  margin:0;
+  padding:0;
+}
+ li{
+  float:right;
+  display: inline;
+  padding: 2%;
+  text-align: center;
+
+}
 
 #{$a-tags} {
+border:none;
+  display: block;
+margin-right:1%;
+  padding: 4px;
+  width: 130px;
+  font-size: $fixed-font-size * 0.8;
   letter-spacing: 10px;
+  font-weight: $light;
+  color: $main-colour-light;
+  text-transform:uppercase;
+  text-decoration: none;
+
+  &:hover{
+    color:$link-colour;
+  }
+
 }
 
-a:hover {
-color: $link-colour;
 }
-}
-
 
 }
 
@@ -125,7 +180,7 @@ width: 100%;
   padding: 0;
   margin:0;
   overflow: hidden;
-  vertical-align: center;
+  
 
   #logo {
     padding:3%;
@@ -138,14 +193,20 @@ width: 100%;
 
   }
   .content{
+min-width: $min-mobile-width;
 
+.phone, i{
+  margin-left: 2%;
+  color: $main-colour-light;
+  font-size: $fixed-font-size * 1.4;
+}
   }
 
-  .leftContent{
-    float:right;
+  .rightContent{
+    float:left;
     color:$main-colour-light;
     text-align: center;
-    width:35%;
+    width:40%;
     padding:4%;
   }
 }
@@ -153,16 +214,54 @@ width: 100%;
 // CTA
 
 .button {
-  border: $button-border;
-  color: $main-colour-light;
-  text-transform: uppercase;
-  font-size: $fixed-font-size / 2;
-  width:280px;
-  padding:10px 5px 10px 5px;
+  background:$link-colour;
+  width:200px;
+  padding:14px 3px 14px 3px;
   margin: 4% auto 2% auto;
-  #{$a-tags} {
-display:block;
+  border-radius: 10px;
+  transition: all 0.4s linear;
+
+  #{$a-tags}{
+    color: $main-colour-light;
+    letter-spacing: 1px;
+    font-size: $fixed-font-size;
+    font-weight: $normal;
+    display:block;
+    text-transform: uppercase;
+    border:none;
   }
+
+  span{
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+
+    &:after {
+      content: '\00BB';
+      position: absolute;
+      opacity: 0;
+      top: -9px;
+      right: -10px;
+      transition: 0.5s;
+      font-size: $fixed-font-size * 1.5;
+    }
+  }
+
+
+&:hover{
+  background-color: $button-hover-bg;
+color:$main-colour-light;
+  font-weight: $semibold;
+  transition: all 0.4s linear;
+    text-transform: uppercase;
+  span {
+    padding-right: 25px;
+   &:after {
+      opacity: 1;
+      right: 0;
+    }
+  }
+}
 
 }
 
@@ -170,31 +269,58 @@ display:block;
 
 #address {
 margin:auto;
-padding:20 4 20 0;
+padding:0.5% 0 0.5% 0;
 background-color: $link-colour;
 color: $main-colour-light;
 }
 
 #introduction {
-  margin:5% auto 5% auto;
   text-align: center;
-  border:2px solid black;
+  position: relative;
+  color: $main-colour-dark;
 
-  .introCopy{
-width:80%;
+.introCopy{
 text-align: center;
+width:90%;
+margin:0 auto 5% auto;
+font-weight: $semibold;
   }
 
-.icon1, {
-  display:inline-block;  
-width: ($wrapper-width / 3);
-border: 2px solid blue;
+img {
+  padding-top:10%;
 }
-.icon2, .icon3{
-  float:left;
-width: ($wrapper-width / 3);
-border: 2px solid blue;
+
+.icon1, .icon2, .icon3 {
+min-width: $min-mobile-width / 3;
+display:inline-block;
+width: 220px;
+height:220px;
+margin:10px;
+border-radius: 50%;
+background: $grey-background;
+
 }
+
+
+
+}
+
+#tilesImage{
+  margin:5% auto 5% auto;
+  text-align: center;
+  position: relative;
+  color: $main-colour-dark;
+  
+
+  .option1, .option2, .option3 {
+      min-width: $min-mobile-width;
+      display:inline-block;
+    width: ($wrapper-width / 3) - 6;
+    text-align: left;
+    height:100%;
+    padding:5px;
+    }
+
 }
 
 
@@ -202,24 +328,73 @@ border: 2px solid blue;
 background-color: $grey-background;
 width:100%;
 padding:5% 0 5% 0;
+font-weight: $semibold;
 }
+
+
+  .map {
+    overflow:hidden;
+    padding-bottom:50%;
+    position:relative;
+    height:0;
+
+    iframe{
+      left:0;
+      top:0;
+      height:100%;
+      width:100%;
+      position:absolute;
+    }
+  }
 
 
 // EMAIL FORM 
 
 #emailForm{
 
-  input,textarea {
-    padding:4px;
-    width: 250px;
+  height:100%;
+  @include vertical-align();
+  background: $main-colour-dark url('images/footer.jpg') no-repeat left center fixed;
+  @include background-size(cover);
+
+  .wrapper {
+
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  }
+  input, textarea {
+    font-family: $main-font;
+    font-size:$fixed-font-size;
+    color: $main-colour-light;
+  padding:10px 20px 10px 20px;
+    width: 50%;
     margin-top:1%;
-    border: $button-border;
+    border: 3px solid $main-colour-light;
+  background:none;
   }
 
+  textarea{
+    height:30%;
+  }
 }
 
 footer {
-font-size: $fixed-font-size / 1.5;
+  text-align:center;
+  background-color:$main-colour-dark;
+  color:$main-colour-light;
+font-size: $fixed-font-size;
+border:none;
+padding:2% 0 2% 0;
+letter-spacing: 1px;
+margin-bottom:0; 
+
+#{$a-tags} {
+  font-size: $fixed-font-size;
+  border: none;
+  font-weight: $semibold;
+  color: $link-colour;
+}  
 }
 
 
@@ -235,7 +410,7 @@ font-size: $fixed-font-size / 1.5;
 
 //  DESKTOP (1281px to Higher Reso)
 
-@media (min-width: 1281px) {
+@media (min-width: $max-desktop-width + 1) {
   
     //CSS
     
@@ -244,7 +419,7 @@ font-size: $fixed-font-size / 1.5;
 // LAPTOPS/DESKTOPS (1025px to 1280px)
 
   
-  @media (min-width: 1025px) and (max-width: 1280px) {
+  @media (min-width: $max-ipad-width + 1) and (max-width: $max-desktop-width) {
     
     //CSS,
     
@@ -253,32 +428,54 @@ font-size: $fixed-font-size / 1.5;
 // TABLETS/IPAD PORATRAIT (768px to 1024px)
 
   
-  @media (min-width: 768px) and (max-width: 1024px) {
+  @media (min-width: $min-ipad-portrait) and (max-width: $max-ipad-width) {
     
     //CSS
     
   }
   
-// TABLES/IPADS LANDSCAPE (768px to 1024px)
+// TABLETS/IPADS LANDSCAPE (768px to 1024px)
 
   
-  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    
-    //CSS
+  @media (min-width: $min-ipad-portrait) and (max-width: $max-ipad-width) and (orientation: landscape) {
     
   }
   
 // LOW RES TABLET/MOBILE LANDSCAPE (481px to 767px)
   
-  @media (min-width: 481px) and (max-width: 767px) {
+  @media (min-width: $max-mobile-width + 1) and (max-width: $min-ipad-portrait - 1) {
     
 
+    #tilesImage .option1 {
+      display:inline-block;
+    width: $wrapper-width;
+    }
   }
   
 // PORTRAIT MOST SMART PHONES (320px to 479px)
 
   
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {
+    
+    .sichuan{
+      display: none;
+    }
+
+    #headerImage {
+  background-image:none;
+  background-color:$main-colour-dark;
+  margin:auto;
+
+  .rightContent{
+    width:100%;
+    text-align: center;
+    padding:0%;
+  }
+
+    }
+
+    
+    
     
   }
 
