@@ -36,7 +36,8 @@ a:hover, a:active:hover, a:link:hover, a:visited:hover {
 }
 
 h1 {
-  font-family: "Source Sans Pro", Helvetica, Verdana, sans-serif;
+  font-weight: 300;
+  font-size: 28px;
 }
 
 h2 {
@@ -46,7 +47,7 @@ h2 {
 
 h5 {
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   letter-spacing: 1px;
 }
@@ -138,29 +139,31 @@ section {
   padding: 4%;
 }
 
-.button {
+.button, button[type=submit] {
   background: #BA0707;
   width: 200px;
   padding: 14px 3px 14px 3px;
   margin: 4% auto 2% auto;
   border-radius: 10px;
   transition: all 0.4s linear;
+  border: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 300;
 }
-.button a, .button a:active, .button a:link, .button a:visited {
+.button a, .button a:active, .button a:link, .button a:visited, button[type=submit] a, button[type=submit] a:active, button[type=submit] a:link, button[type=submit] a:visited {
   color: #ffffff;
   letter-spacing: 1px;
-  font-size: 20px;
-  font-weight: 300;
   display: block;
-  text-transform: uppercase;
   border: none;
 }
-.button span {
+.button span, button[type=submit] span {
   cursor: pointer;
   position: relative;
   transition: 0.5s;
 }
-.button span:after {
+.button span:after, button[type=submit] span:after {
   content: "»";
   position: absolute;
   opacity: 0;
@@ -169,17 +172,16 @@ section {
   transition: 0.5s;
   font-size: 30px;
 }
-.button:hover {
+.button:hover, button[type=submit]:hover {
   background-color: #620404;
   color: #ffffff;
-  font-weight: 500;
   transition: all 0.4s linear;
   text-transform: uppercase;
 }
-.button:hover span {
+.button:hover span, button[type=submit]:hover span {
   padding-right: 25px;
 }
-.button:hover span:after {
+.button:hover span:after, button[type=submit]:hover span:after {
   opacity: 1;
   right: 0;
 }
@@ -211,8 +213,6 @@ section {
   width: 220px;
   height: 220px;
   margin: 10px;
-  border-radius: 50%;
-  background: #F4F4F4;
 }
 
 #tilesImage {
@@ -226,7 +226,6 @@ section {
   display: inline-block;
   width: 20.6666666667%;
   text-align: left;
-  height: 100%;
   padding: 5px;
 }
 
@@ -253,12 +252,7 @@ section {
 
 #emailForm {
   height: 100%;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  background: #1f201a url("images/footer.jpg") no-repeat left center fixed;
+  background: #1f201a url("images/footer.jpg") no-repeat left bottom fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
@@ -269,10 +263,10 @@ section {
   top: 50%;
   transform: translateY(-50%);
 }
-#emailForm input, #emailForm textarea {
+#emailForm input, #emailForm textarea, #emailForm input[type=name], #emailForm input[type=email] {
   font-family: "Source Sans Pro", Helvetica, Verdana, sans-serif;
   font-size: 20px;
-  color: #ffffff;
+  color: #ffffff !important;
   padding: 10px 20px 10px 20px;
   width: 50%;
   margin-top: 1%;
@@ -300,26 +294,33 @@ footer a, footer a:active, footer a:link, footer a:visited {
   color: #BA0707;
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
-  #tilesImage .option1 {
+@media (min-width: 768px) and (max-width: 1024px) {
+  #tilesImage .option1, #tilesImage .option2, #tilesImage option3 {
     display: inline-block;
     width: 80%;
   }
 }
+@media (min-width: 481px) and (max-width: 767px) {
+  .rightContent {
+    background-color: #1c1d17;
+    background-color: rgba(31, 32, 26, 0.9);
+  }
+}
 @media (min-width: 320px) and (max-width: 480px) {
+  .rightContent {
+    background-color: #1c1d17;
+    background-color: rgba(31, 32, 26, 0.9);
+    width: 100%;
+    padding: 4px;
+  }
+
   .sichuan {
     display: none;
   }
 
-  #headerImage {
-    background-image: none;
-    background-color: #1f201a;
-    margin: auto;
-  }
-  #headerImage .rightContent {
-    width: 100%;
-    text-align: center;
-    padding: 0%;
+  #tilesImage .option1 {
+    display: inline-block;
+    width: 80%;
   }
 }
 /* 

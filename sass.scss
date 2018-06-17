@@ -40,6 +40,14 @@ $max-desktop-width: 1280px;
 
 // SEPARATE MIXIN FILE WHEN READY 
 
+@mixin alpha-background-color($color, $background) {
+  $percent: alpha($color) * 100%;
+  $opaque: opacify($color, 1);
+  $solid-color: mix($opaque, $background, $percent);
+  background-color: $solid-color;
+  background-color: $color;
+}
+
 @mixin background-size($style) {
     -webkit-background-size: $style;
        -moz-background-size: $style;
@@ -95,7 +103,9 @@ html, body {
 
 
 h1 {
-  font-family: $main-font;
+  font-weight:$normal;
+  font-size: $fixed-font-size * 1.4;
+
 }
 
 h2 {
@@ -105,7 +115,7 @@ h2 {
 
 h5 {
   text-transform: uppercase;
-  font-size: $fixed-font-size * 0.9;
+  font-size: $fixed-font-size;
   font-weight: $semibold;
   letter-spacing: 1px;
 }
@@ -138,7 +148,7 @@ ul{
   padding:0;
 }
  li{
-  float:right;
+  float: right;
   display: inline;
   padding: 2%;
   text-align: center;
@@ -213,21 +223,23 @@ min-width: $min-mobile-width;
 
 // CTA
 
-.button {
+.button, button[type=submit]  {
   background:$link-colour;
   width:200px;
   padding:14px 3px 14px 3px;
   margin: 4% auto 2% auto;
   border-radius: 10px;
   transition: all 0.4s linear;
+  border: none;
+  font-size: $fixed-font-size;
+  text-transform: uppercase;
+  color: $main-colour-light;
+  font-weight: $normal;
 
   #{$a-tags}{
     color: $main-colour-light;
     letter-spacing: 1px;
-    font-size: $fixed-font-size;
-    font-weight: $normal;
     display:block;
-    text-transform: uppercase;
     border:none;
   }
 
@@ -235,6 +247,7 @@ min-width: $min-mobile-width;
     cursor: pointer;
     position: relative;
     transition: 0.5s;
+    
 
     &:after {
       content: '\00BB';
@@ -251,10 +264,10 @@ min-width: $min-mobile-width;
 &:hover{
   background-color: $button-hover-bg;
 color:$main-colour-light;
-  font-weight: $semibold;
   transition: all 0.4s linear;
     text-transform: uppercase;
   span {
+
     padding-right: 25px;
    &:after {
       opacity: 1;
@@ -296,8 +309,6 @@ display:inline-block;
 width: 220px;
 height:220px;
 margin:10px;
-border-radius: 50%;
-background: $grey-background;
 
 }
 
@@ -317,7 +328,6 @@ background: $grey-background;
       display:inline-block;
     width: ($wrapper-width / 3) - 6;
     text-align: left;
-    height:100%;
     padding:5px;
     }
 
@@ -353,8 +363,7 @@ font-weight: $semibold;
 #emailForm{
 
   height:100%;
-  @include vertical-align();
-  background: $main-colour-dark url('images/footer.jpg') no-repeat left center fixed;
+  background: $main-colour-dark url('images/footer.jpg') no-repeat left bottom fixed;
   @include background-size(cover);
 
   .wrapper {
@@ -363,10 +372,11 @@ font-weight: $semibold;
   top: 50%;
   transform: translateY(-50%);
   }
-  input, textarea {
+
+  input, textarea, input[type=name] , input[type=email]  {
     font-family: $main-font;
     font-size:$fixed-font-size;
-    color: $main-colour-light;
+    color: $main-colour-light !important;
   padding:10px 20px 10px 20px;
     width: 50%;
     margin-top:1%;
@@ -377,6 +387,7 @@ font-weight: $semibold;
   textarea{
     height:30%;
   }
+
 }
 
 footer {
@@ -430,7 +441,15 @@ margin-bottom:0;
   
   @media (min-width: $min-ipad-portrait) and (max-width: $max-ipad-width) {
     
-    //CSS
+ 
+    #tilesImage{
+
+      .option1 , .option2, option3 {
+      display:inline-block;
+    width: $wrapper-width;
+    }
+
+  }
     
   }
   
@@ -446,10 +465,13 @@ margin-bottom:0;
   @media (min-width: $max-mobile-width + 1) and (max-width: $min-ipad-portrait - 1) {
     
 
-    #tilesImage .option1 {
-      display:inline-block;
-    width: $wrapper-width;
-    }
+  .rightContent{
+    @include alpha-background-color(rgba($main-colour-dark, 0.9), black);
+
+  }
+
+
+
   }
   
 // PORTRAIT MOST SMART PHONES (320px to 479px)
@@ -457,23 +479,22 @@ margin-bottom:0;
   
   @media (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {
     
-    .sichuan{
-      display: none;
-    }
-
-    #headerImage {
-  background-image:none;
-  background-color:$main-colour-dark;
-  margin:auto;
 
   .rightContent{
-    width:100%;
-    text-align: center;
-    padding:0%;
+    @include alpha-background-color(rgba($main-colour-dark, 0.9), black);
+width:100%;
+padding:4px;
   }
 
-    }
+  .sichuan{
+    display: none;
+  }
 
+    #tilesImage .option1 {
+      display:inline-block;
+    width: $wrapper-width;
+    }
+    
     
     
     
