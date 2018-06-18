@@ -1,5 +1,5 @@
 /* 
-START OF SASS STYLESHEET by Beckyliu.com
+START OF SASSY STYLESHEET  by Beckyliu.com
 */
 
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,700');
@@ -13,7 +13,7 @@ $normal: 300;
 $semibold: 500;
 $bold: 600;
 
-$grey-background:#EDEDED;
+$grey-background:#F4F4F4;
 
 $main-colour-dark:#1f201a;
 $main-colour-light:#ffffff;
@@ -36,6 +36,7 @@ $min-ipad-portrait:768px;
 $max-ipad-width: 1024px;
 
 $max-desktop-width: 1280px;
+
 
 
 // SEPARATE MIXIN FILE WHEN READY 
@@ -101,7 +102,6 @@ html, body {
 
 
 .wrapper{
-  max-width: $max-desktop-width;
     width:$wrapper-width;
     overflow: hidden;
     margin: auto;
@@ -110,17 +110,17 @@ html, body {
 
 h1 {
   font-weight:$normal;
-  font-size: 1.2rem;
+  font-size: $fixed-font-size * 1.4;
 
 }
 
 h2 {
   font-weight: $semibold;
-  font-size: 1.2rem;
+  font-size: $fixed-font-size * 1.2;
 }
 
 h5 {
-  font-size: 1.2rem;
+  font-size: $fixed-font-size * 1.2;
   font-weight: $semibold;
   letter-spacing: 1px;
 }
@@ -132,7 +132,7 @@ color:$main-colour-light;
 padding:2%;
 margin: 0;
 min-height: 8%;
-font-size: 1.2rem;
+font-size: $fixed-font-size * 1.2;
 
 #logo {
   float: left;
@@ -160,14 +160,13 @@ ul{
 
 }
 
-
 #{$a-tags} {
 border:none;
   display: block;
 margin-right:1%;
   padding: 4px;
   width: 130px;
-  font-size: 0.8rem;
+  font-size: $fixed-font-size * 0.8;
   letter-spacing: 10px;
   font-weight: $light;
   color: $main-colour-light;
@@ -196,7 +195,6 @@ width: 100%;
   padding: 0;
   margin:0;
   overflow: hidden;
-  max-height: 800px;
   
 
   #logo {
@@ -215,12 +213,11 @@ min-width: $min-mobile-width;
 .phone, i{
   margin-left: 2%;
   color: $main-colour-light;
-  font-size: 1.4rem;
+  font-size: $fixed-font-size * 1.4;
 }
   }
 
   .rightContent{
-    top:20%;
     float:left;
     color:$main-colour-light;
     text-align: center;
@@ -264,7 +261,7 @@ min-width: $min-mobile-width;
       top: -9px;
       right: -10px;
       transition: 0.5s;
-      font-size: 1.5rem;
+      font-size: $fixed-font-size * 1.5;
     }
   }
 
@@ -349,38 +346,7 @@ padding:5% 0 5% 0;
 font-weight: $semibold;
 }
 
-#secondaryContent {
-  margin:auto;
-  text-align: left;
-  position: relative;
-border:2px solid pink;
 
-.wrapper{
-  margin:auto;
-  border:2px solid orange;
-}
-
-  .history {
-    min-width: $min-mobile-width;
-  float: left;
-  width: 66%;
-  text-align: left;
-border:5px solid blue;
-padding: 5px;
-display:inline-block;
-  }
-
-  .openingHours{
-    padding: 5px;
-    min-width: $min-mobile-width;
-    float: right;
-    width: $wrapper-width / 3;
-    border:2px solid purple;
-  }
-}
-
-
-// GOOGLE MAP RESPONSIVE
   .map {
     overflow:hidden;
     padding-bottom:50%;
@@ -427,7 +393,7 @@ display:inline-block;
     height:30%;
   }
 
-// STYLESHEET by Becky Liu
+
 
 .backToTop{
 
@@ -465,34 +431,9 @@ margin-bottom:0;
 //  DESKTOP (1281px to Higher Reso)
 
 @media (min-width: $max-desktop-width + 1) {
-  h1 {
-    font-size:1.5rem;
-  }
-
-  h2{
-    font-size:1.2rem;
-  }
-
-  #headerImage {
-
-  .sichuan {
-    width:40%;
-    padding:0px;
-    float:left;
-    min-height: 80%;
-
-  }
-
-  .rightContent{
-    float:right;
-    color:$main-colour-light;
-    text-align: center;
-    width:40%;
-    padding:5%;
-
   
-  }
-}
+    //CSS
+    
   }
   
 // LAPTOPS/DESKTOPS (1025px to 1280px)
@@ -512,9 +453,9 @@ margin-bottom:0;
  
     #tilesImage{
 
-      .option1 , .option2, .option3 {
+      .option1 , .option2, option3 {
       display:inline-block;
-    width: 100%;
+    width: $wrapper-width;
     }
 
   }
@@ -532,10 +473,6 @@ margin-bottom:0;
   
   @media (min-width: $max-mobile-width + 1) and (max-width: $min-ipad-portrait - 1) {
     
-    nav{
-      position: fixed;
-      background-color: $main-colour-dark;    
-    }
 
   .rightContent{
     @include alpha-background-color(rgba($main-colour-dark, 0.9), black);
@@ -615,5 +552,5 @@ margin:auto;
   }
 
 /* 
-END OF STYLESHEET
+END OF SASSY STYLESHEET by Beckyliu.com
 */

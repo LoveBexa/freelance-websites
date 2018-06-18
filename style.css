@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* 
-START OF STYLESHEET (Written by Beckyliu.com)
+START OF SASS STYLESHEET by Beckyliu.com
 */
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,700");
 html, body {
@@ -14,6 +14,11 @@ html, body {
   width: 100%;
   height: 100%;
   letter-spacing: 0px;
+  scroll-behavior: smooth;
+}
+
+.smooth-container {
+  scroll-behavior: smooth;
 }
 
 a, a:active, a:link, a:visited {
@@ -30,6 +35,7 @@ a:hover, a:active:hover, a:link:hover, a:visited:hover {
 }
 
 .wrapper {
+  max-width: 1280px;
   width: 80%;
   overflow: hidden;
   margin: auto;
@@ -37,17 +43,16 @@ a:hover, a:active:hover, a:link:hover, a:visited:hover {
 
 h1 {
   font-weight: 300;
-  font-size: 28px;
+  font-size: 1.2rem;
 }
 
 h2 {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.2rem;
 }
 
 h5 {
-  text-transform: uppercase;
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 1px;
 }
@@ -58,7 +63,7 @@ header {
   padding: 2%;
   margin: 0;
   min-height: 8%;
-  font-size: 24px;
+  font-size: 1.2rem;
 }
 header #logo {
   float: left;
@@ -88,7 +93,7 @@ header nav a, header nav a:active, header nav a:link, header nav a:visited {
   margin-right: 1%;
   padding: 4px;
   width: 130px;
-  font-size: 16px;
+  font-size: 0.8rem;
   letter-spacing: 10px;
   font-weight: 200;
   color: #ffffff;
@@ -114,6 +119,7 @@ section {
   padding: 0;
   margin: 0;
   overflow: hidden;
+  max-height: 800px;
 }
 #headerImage #logo {
   padding: 3%;
@@ -129,9 +135,10 @@ section {
 #headerImage .content .phone, #headerImage .content i {
   margin-left: 2%;
   color: #ffffff;
-  font-size: 28px;
+  font-size: 1.4rem;
 }
 #headerImage .rightContent {
+  top: 20%;
   float: left;
   color: #ffffff;
   text-align: center;
@@ -170,7 +177,7 @@ section {
   top: -9px;
   right: -10px;
   transition: 0.5s;
-  font-size: 30px;
+  font-size: 1.5rem;
 }
 .button:hover, button[type=submit]:hover {
   background-color: #620404;
@@ -230,10 +237,37 @@ section {
 }
 
 #bookingCopy {
-  background-color: #F4F4F4;
+  background-color: #EDEDED;
   width: 100%;
   padding: 5% 0 5% 0;
   font-weight: 500;
+}
+
+#secondaryContent {
+  margin: auto;
+  text-align: left;
+  position: relative;
+  border: 2px solid pink;
+}
+#secondaryContent .wrapper {
+  margin: auto;
+  border: 2px solid orange;
+}
+#secondaryContent .history {
+  min-width: 320px;
+  float: left;
+  width: 66%;
+  text-align: left;
+  border: 5px solid blue;
+  padding: 5px;
+  display: inline-block;
+}
+#secondaryContent .openingHours {
+  padding: 5px;
+  min-width: 320px;
+  float: right;
+  width: 26.6666666667%;
+  border: 2px solid purple;
 }
 
 .map {
@@ -276,6 +310,13 @@ section {
 #emailForm textarea {
   height: 30%;
 }
+#emailForm .backToTop {
+  color: #ffffff;
+}
+#emailForm .backToTop a, #emailForm .backToTop a:active, #emailForm .backToTop a:link, #emailForm .backToTop a:visited {
+  color: #ffffff;
+  letter-spacing: 3px;
+}
 
 footer {
   text-align: center;
@@ -294,27 +335,80 @@ footer a, footer a:active, footer a:link, footer a:visited {
   color: #BA0707;
 }
 
+@media (min-width: 1281px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  #headerImage .sichuan {
+    width: 40%;
+    padding: 0px;
+    float: left;
+    min-height: 80%;
+  }
+  #headerImage .rightContent {
+    float: right;
+    color: #ffffff;
+    text-align: center;
+    width: 40%;
+    padding: 5%;
+  }
+}
 @media (min-width: 768px) and (max-width: 1024px) {
-  #tilesImage .option1, #tilesImage .option2, #tilesImage option3 {
+  #tilesImage .option1, #tilesImage .option2, #tilesImage .option3 {
     display: inline-block;
-    width: 80%;
+    width: 100%;
   }
 }
 @media (min-width: 481px) and (max-width: 767px) {
+  nav {
+    position: fixed;
+    background-color: #1f201a;
+  }
+
   .rightContent {
     background-color: #1c1d17;
     background-color: rgba(31, 32, 26, 0.9);
+  }
+
+  #introduction .icon1, #introduction .icon2, #introduction .icon3 {
+    min-width: 450px;
+    display: block;
+    width: 80%;
+    height: 80%;
+    margin: 10px;
   }
 }
 @media (min-width: 320px) and (max-width: 480px) {
-  .rightContent {
+  nav {
+    position: fixed;
+    background-color: #1f201a;
+  }
+  nav ul {
+    height: 200px;
+  }
+  nav ul li {
+    float: left;
+    padding: 2%;
+    text-align: center;
+  }
+  nav ul li a:link {
+    width: 100%;
+    letter-spacing: 5px;
+  }
+
+  #headerImage .rightContent {
     background-color: #1c1d17;
     background-color: rgba(31, 32, 26, 0.9);
     width: 100%;
-    padding: 4px;
+    padding: 20px 0 20px 0;
+    margin: auto;
   }
-
-  .sichuan {
+  #headerImage .sichuan {
     display: none;
   }
 
@@ -322,9 +416,14 @@ footer a, footer a:active, footer a:link, footer a:visited {
     display: inline-block;
     width: 80%;
   }
+
+  #emailForm input, #emailForm textarea, #emailForm input[type=name], #emailForm input[type=email], #emailForm button[type=submit] {
+    width: 280px;
+    margin-bottom: 10px;
+  }
 }
 /* 
-END OFF STYLESHEET (Written by Beckyliu.com)
+END OF STYLESHEET
 */
 
 /*# sourceMappingURL=style.css.map */
