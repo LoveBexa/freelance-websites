@@ -1,4 +1,4 @@
-# sichuan-website
+# SiChuan Website
 Sichuan Restaurant, North Greenwich - Responsive Web Development - http://www.sichuangreenwich.co.uk
 # 
 # 
