@@ -1,0 +1,840 @@
+/* 
+START OF SASS STYLESHEET by Beckyliu.com
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,700');
+
+
+$main-font:"Source Sans Pro", Helvetica, Verdana, sans-serif;
+$fixed-font-size: 20px;
+
+$light: 200;
+$normal: 300;
+$semibold: 500;
+$bold: 600;
+
+$grey-background:#EDEDED;
+
+$main-colour-dark:#1f201a;
+$main-colour-light:#ffffff;
+$link-colour: #BA0707;
+$button-hover-bg: #620404;
+$fabric-background: url('images/fabric-bg.jpg');
+
+$a-tags: 'a, a:active, a:link, a:visited';
+
+$button-border: 3px solid $link-colour;
+$thick-border: 7px solid $main-colour-dark;
+
+$wrapper-width: 80%;
+
+
+$min-mobile-width: 320px;
+$max-mobile-width: 480px;
+
+$min-ipad-portrait:768px; 
+$max-ipad-width: 1024px;
+
+$max-desktop-width: 1280px;
+
+
+// MIXIN FILE 
+
+@import "_mixins.scss"; 
+ 
+// START CSS HERE
+
+html, body {
+    font-family: $main-font;
+    font-weight: $normal;
+    font-size: $fixed-font-size;
+    text-align: center;
+    color:$main-colour-dark;
+    background-color: $main-colour-light;
+    margin:0;
+    padding:0;
+    width:100%;
+    height: auto !important;
+    height: 100%;
+    min-height: 100%;
+    letter-spacing: 0px;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+
+}
+
+.smooth-container {
+  scroll-behavior: smooth;
+}
+
+#{$a-tags} {
+  color: $main-colour-dark;
+  font-family: $main-font;
+  border-bottom:3px solid $link-colour;
+  text-decoration: none;
+  letter-spacing: 0px;
+
+&:hover {
+
+  transition: all 0.4s linear;
+  border-color: $main-colour-light;
+  }
+}
+
+.wrapper{
+  max-width: $max-desktop-width;
+    width:$wrapper-width;
+    overflow: hidden;
+    margin: auto;
+}
+
+
+h1 {
+  font-weight:$normal;
+  font-size: 1.2rem;
+
+}
+
+h2 {
+  font-weight: $semibold;
+  font-size: 1.2rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+  font-weight: $semibold;
+  letter-spacing: 1px;
+}
+
+
+header {
+background-color: $main-colour-dark;
+color:$main-colour-light;
+padding:2%;
+margin: 0;
+min-height: 8%;
+font-size: 1.2rem;
+
+// LOGO - JUST INCASE
+#logo {
+  display: inline-block;
+  float: left;
+  margin: auto;
+h1 {
+  margin:0;
+}
+}  // END LOGO
+
+
+}
+
+// START RESPONSIVE NAV BAR
+
+i.fa-bars{
+color: $main-colour-light;
+}
+nav {
+  color: $main-colour-light;
+  width: 100%;
+
+ul {
+    list-style-type: none;
+		width: 100%;
+		padding: 0px 0px;
+		overflow: hidden;
+    margin: 0;
+    float:left;
+}
+
+li {
+  list-style-type: none;
+  float: right;
+  text-align: center;
+
+#{$a-tags} {
+  display: block; 
+  padding: 10% 0% 10% 0%;
+  width: 160px;
+  color: $main-colour-light;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.8rem;
+  position:relative; 
+  text-transform: uppercase;
+  letter-spacing:5px;
+  border: 0;
+
+
+&:hover{
+  color: $link-colour;
+}
+}
+
+.active{
+  font-weight: $bold;
+  background-color: $link-colour;
+}
+
+}
+
+}
+
+// END OF NAVBAR
+
+
+section{
+  text-align: center;
+width: 100%;
+}
+
+#headerImage {
+  background: $main-colour-dark url('../images/side.jpg') no-repeat left center fixed;
+  @include background-size(cover);
+  width:100%;
+  padding: 0;
+  margin:0;
+  overflow: hidden;
+  transition: 0.5s;
+ 
+ 
+.tripAdvisor{
+  width: 190px;
+  margin:auto;
+  padding-top:5%;
+  text-align:center;
+  a{
+    border-bottom: none;
+    text-decoration: none;
+  }
+}
+
+
+  #logo {
+    padding:3%;
+  }
+
+  .sichuan {
+    width:40%;
+    float:left;
+    min-height: 80%;
+
+  }
+
+  .content{
+min-width: $wrapper-width;
+
+.phone, i{
+  margin-left: 2%;
+  color: $main-colour-light;
+  font-size: 1.4rem;
+}
+  }
+
+  .rightContent{
+    margin-top:0;
+    top:20%;
+    float:right;
+    color:$main-colour-light;
+    text-align: center;
+    width:40%;
+    padding:10% 4% 4% 4%;
+  }
+}
+
+// CTA
+
+.button, button[type=submit]  {
+  background:$link-colour;
+  width:200px;
+  padding:14px 3px 14px 3px;
+  margin: 4% auto 2% auto;
+  border-radius: 10px;
+  transition: all 0.4s linear;
+  border: none;
+  font-size: $fixed-font-size;
+  text-transform: uppercase;
+  color: $main-colour-light;
+  font-weight: $normal;
+
+  #{$a-tags}{
+    color: $main-colour-light;
+    letter-spacing: 1px;
+    display:block;
+    border:none;
+  }
+
+  span{
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+    
+
+    &:after {
+      content: '\00BB';
+      position: absolute;
+      opacity: 0;
+      top: -9px;
+      right: -10px;
+      transition: 0.5s;
+      font-size: 1.5rem;
+    }
+  }
+
+
+&:hover{
+  background-color: $button-hover-bg;
+color:$main-colour-light;
+  transition: all 0.4s linear;
+    text-transform: uppercase;
+  span {
+    padding-right: 25px;
+   &:after {
+      opacity: 1;
+      right: 0;
+    }
+  }
+}
+
+}
+
+// CONTENT STARTS HERE
+
+#address {
+margin:auto;
+padding:0.5% 0 0.5% 0;
+background-color: $link-colour;
+color: $main-colour-light;
+}
+
+#introduction {
+  text-align: center;
+  position: relative;
+  color: $main-colour-dark;
+   margin:5% auto 5% auto;
+
+
+
+.introCopy{
+text-align: center;
+width:90%;
+margin:0 auto 5% auto;
+font-weight: $semibold;
+  }
+
+img {
+  padding-top:10%;
+}
+
+.icon1, .icon2, .icon3 {
+min-width: $min-mobile-width / 3;
+display:inline-block;
+width: 220px;
+height:220px;
+margin:10px;
+
+}
+
+
+input, textarea, input[type=name] , input[type=email]  {
+  color: $main-colour-dark;
+  border-color: $main-colour-dark;
+  min-width: 210px;
+}
+
+textarea {
+  color: $main-colour-dark;
+  height:200px;
+}
+
+
+
+} // END OF INTRODUCTION
+
+#tilesImage{
+  margin:10% auto -5% auto;
+  text-align: center;
+  position: relative;
+  color: $main-colour-dark;
+  
+
+  .option1, .option2, .option3 {
+
+    width: 31%;
+    float: left;
+    display:inline-block;
+    text-align: left;
+    margin: auto 10px auto 10px;
+
+}
+
+}
+
+
+#bookingCopy {
+background-color: $grey-background;
+width:100%;
+padding:5% 0 5% 0;
+font-weight: $semibold;
+
+}
+
+#secondaryContent {
+  margin:auto;
+  text-align: left;
+  position: relative;
+margin:10% auto 10% auto;
+
+.wrapper{
+  margin:auto;
+}
+
+  .history {
+
+  float: left;
+  width: 66%;
+  text-align: left;
+  padding: 5px;
+  display:inline-block;
+  }
+
+  .openingHours{
+    width:30%;
+    padding: 5px;
+    float: right;
+  }
+}
+
+
+// GOOGLE MAP RESPONSIVE
+  .map {
+    overflow:hidden;
+    padding-bottom:50%;
+    position:relative;
+
+    iframe{
+      left:0;
+      top:0;
+      height:100%;
+      width:100%;
+      position:absolute;
+    }
+  }
+
+
+// EMAIL FORM 
+input, textarea, input[type=name] , input[type=email]  {
+  font-family: $main-font;
+  font-size:$fixed-font-size;
+  color: $main-colour-light;
+padding:10px 20px 10px 20px;
+  width: 50%;
+  margin-top:1%;
+  border: 3px solid $main-colour-light;
+background:none;
+display: inline-block;
+}
+
+input[type=submit] {
+  width: auto !important;
+
+}
+
+#emailForm{
+
+  background: $main-colour-dark url('../images/footer.jpg') no-repeat left bottom fixed;
+  @include background-size(cover);
+
+  .wrapper {
+padding: 10%;
+  }
+
+textarea {
+  height: 200px;
+}
+  
+
+// STYLESHEET by Becky Liu
+h1 {
+  color: $main-colour-light;
+}
+
+} // END OF EMAIL FORM
+
+
+
+
+footer {
+  text-align: center;
+  background-color:$main-colour-dark;
+  color:$main-colour-light;
+  font-size: $fixed-font-size;
+  border:none;
+  padding:2% 0 0% 0;
+  letter-spacing: 1px;
+  margin-bottom:0; 
+
+  
+.backToTop{
+  width:100%; 
+  display: block;
+  padding: 1% 0% 3% 0%;
+  
+    #{$a-tags}  {
+  color: $link-colour;
+      letter-spacing:3px;
+    }
+    
+    
+  }
+  
+
+
+#{$a-tags} {
+  font-size: $fixed-font-size;
+  border: none;
+  font-weight: $semibold;
+  color: $link-colour;
+}  
+}
+
+//  DESKTOP (1281px to Higher Reso)
+
+@media (min-width: $max-desktop-width + 1) {
+
+
+  h1 {
+    font-size:1.5rem;
+  }
+
+  h2{
+    font-size:1.2rem;
+  }
+
+  #headerImage {
+
+
+  .sichuan {
+    padding:0px;
+    float:left;
+    width:40%;
+    min-height: 80%;
+    width:100%;
+  }
+
+  .rightContent{
+    margin-top: 0;
+    width:40%;
+    float:right;
+    color:$main-colour-light;
+    text-align: center;
+    padding:2%;
+
+  
+  }
+}
+
+    
+  }
+  
+// LAPTOPS/DESKTOPS (1025px to 1280px)
+
+  
+  @media (min-width: $max-ipad-width + 1) and (max-width: $max-desktop-width) {
+    
+
+    #tilesImage{
+      .option1 , .option2, .option3 {
+        width: 30%;
+        float: left;
+        display:inline-block;
+        text-align: left;
+        margin: auto 10px auto 10px;
+    }
+
+  }
+
+  }
+  
+// TABLETS/IPAD PORATRAIT (768px to 1024px)
+
+  
+  @media (min-width: $min-ipad-portrait) and (max-width: $max-ipad-width) {
+
+ 
+    #tilesImage{
+      .option1 , .option2, .option3 {
+        @include small-device-content;
+    }
+
+  }
+
+  
+  #emailForm{
+    input, textarea, input[type=name] , input[type=email], button[type=submit] {
+     
+    width: 450px;
+    margin-bottom: 10px;
+          }
+          
+  }
+
+
+#headerImage {
+  
+  
+  #logo {
+    display: none;
+  }  // END LOGO
+  
+
+
+  .rightContent{
+    margin-top: 0;
+    @include alpha-background-color(rgba($main-colour-dark, 0.9), black);
+width: 100%;
+padding:15px 0 20px 0;
+margin:0 auto auto auto;
+top: 0px;
+  }
+
+  .sichuan{
+    display: none;
+  }
+
+}
+ 
+    
+#introduction {
+
+  .icon1, .icon2, .icon3 {
+    @include icon-small-device;
+    }
+  
+  
+}
+
+
+
+
+  }
+
+
+// TABLETS/IPADS LANDSCAPE (768px to 1024px)
+
+  
+  @media (min-width: $min-ipad-portrait) and (max-width: $max-ipad-width) and (orientation: landscape) {
+    
+    nav li {
+      background-color:$main-colour-dark;
+    }  
+
+    #tilesImage{
+.option1, .option2, .option3 {
+  @include small-device-content;
+}
+    }
+
+    #secondaryContent {
+      margin:10% auto 5% auto;
+    
+      .history {
+        @include small-device-content;
+      }
+    
+      .openingHours{
+        @include small-device-content;
+      }
+    }
+    #introduction {
+
+      .icon1, .icon2, .icon3 {
+        @include icon-small-device;
+        }
+      
+      
+    }
+
+        
+    #emailForm{
+      input, textarea, input[type=name] , input[type=email], button[type=submit] {
+       
+      width: 450px;
+      margin-bottom: 10px;
+            }
+            
+    }
+   
+
+  }
+  
+// LOW RES TABLET/MOBILE LANDSCAPE (481px to 767px)
+  
+  @media (min-width: $max-mobile-width + 1) and (max-width: $min-ipad-portrait - 1) {
+  
+    #logo {
+      display: none;
+    }  // END LOGO
+    
+
+  .rightContent{
+    @include alpha-background-color(rgba($main-colour-dark, 0.9), black);
+margin:0;
+padding:0;
+  }
+
+  #introduction {
+
+    
+.icon1, .icon2, .icon3 {
+  @include icon-small-device;
+  }
+}
+
+#tilesImage{
+  .option1, .option2, .option3 {
+    @include small-device-content;
+  }
+      }
+
+      #secondaryContent {
+        margin:10% auto 5% auto;
+      
+        .history {
+      
+        @include small-device-content;
+        }
+      
+        .openingHours{
+          @include small-device-content;
+
+        }
+      }
+      
+    
+      #emailForm{
+        input, textarea, input[type=name] , input[type=email], button[type=submit] {
+        
+        width: 400px;
+              }
+              
+      }
+         
+
+  }
+  
+// PORTRAIT MOST SMART PHONES (320px to 479px)
+
+  
+  @media (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {
+ 
+
+
+#headerImage {
+  top: 0px;
+
+  #logo {
+    display: none;
+  }  // END LOGO
+  
+  .rightContent{
+    @include alpha-background-color(rgba($main-colour-dark, 0.9), black);
+width: 100%;
+padding:20px 0 20px 0;
+margin:0 auto auto auto;
+  }
+
+  .sichuan{
+    display: none;
+  }
+
+}
+
+    #tilesImage .option1 {
+      display:inline-block;
+    width: $wrapper-width;
+    }
+    
+    #emailForm{
+      input, textarea, input[type=name] , input[type=email], button[type=submit] {
+       
+      width:320px;
+      margin-bottom: 10px;
+            }
+            
+    }
+   
+    
+#secondaryContent {
+  margin:10% auto auto auto;
+
+  .history {
+
+    @include small-device-content;
+  }
+
+  .openingHours{
+    @include small-device-content;
+    margin-bottom:20%;
+  }
+}
+
+
+#tilesImage{
+  .option1 , .option2, .option3 {
+    @include small-device-content;
+
+}
+}
+
+
+  }
+
+  @media screen and (max-width: 620px) {
+  
+
+nav {
+  color: $main-colour-light;
+  width: 100%;
+
+ul {
+    list-style-type: none;
+		width: 100%;
+		padding: 0px 0px;
+		overflow: hidden;
+    margin: 0;
+    float:none;
+}
+
+li {
+  list-style-type: none;
+  float: none;
+  width: 100%;
+  background-color:$main-colour-dark;
+
+
+#{$a-tags} {
+  display: inline-block; 
+  padding: 5% 0% 5% 0%;
+  width: 100%;
+  color: $main-colour-light;
+  text-decoration: none;
+  font-size: 0.8rem;
+  border-bottom: 3px solid $main-colour-light;
+  text-align: center;
+
+
+
+}
+
+}
+
+}
+
+
+
+
+  }
+
+/* 
+END OF STYLESHEET
+*/

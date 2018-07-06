@@ -1,0 +1,36 @@
+@mixin alpha-background-color($color, $background) {
+    $percent: alpha($color) * 100%;
+    $opaque: opacify($color, 1);
+    $solid-color: mix($opaque, $background, $percent);
+    background-color: $solid-color;
+    background-color: $color;
+}
+  
+  @mixin background-size($style) {
+    -webkit-background-size: $style;
+    -moz-background-size: $style;
+    -ms-background-size: $style;
+    -o-background-size: $style;
+    }
+  
+    @mixin vertical-align($position: relative) {
+    position: $position;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+  
+    @mixin small-device-content {
+    width: 100%;
+    display: block;
+    padding: 0;
+}
+  
+  @mixin icon-small-device {
+    min-width: 100px;
+    display:inline-block;
+    width: ($wrapper-width) / 3;
+    margin:10px;
+}
+    

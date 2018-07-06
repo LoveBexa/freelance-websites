@@ -1,0 +1,618 @@
+@charset "UTF-8";
+/* 
+START OF SASS STYLESHEET by Beckyliu.com
+*/
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,700");
+html, body {
+  font-family: "Source Sans Pro", Helvetica, Verdana, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
+  color: #1f201a;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto !important;
+  height: 100%;
+  min-height: 100%;
+  letter-spacing: 0px;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+}
+
+.smooth-container {
+  scroll-behavior: smooth;
+}
+
+a, a:active, a:link, a:visited {
+  color: #1f201a;
+  font-family: "Source Sans Pro", Helvetica, Verdana, sans-serif;
+  border-bottom: 3px solid #BA0707;
+  text-decoration: none;
+  letter-spacing: 0px;
+}
+a:hover, a:active:hover, a:link:hover, a:visited:hover {
+  transition: all 0.4s linear;
+  border-color: #ffffff;
+}
+
+.wrapper {
+  max-width: 1280px;
+  width: 80%;
+  overflow: hidden;
+  margin: auto;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+header {
+  background-color: #1f201a;
+  color: #ffffff;
+  padding: 2%;
+  margin: 0;
+  min-height: 8%;
+  font-size: 1.2rem;
+}
+header #logo {
+  display: inline-block;
+  float: left;
+  margin: auto;
+}
+header #logo h1 {
+  margin: 0;
+}
+
+i.fa-bars {
+  color: #ffffff;
+}
+
+nav {
+  color: #ffffff;
+  width: 100%;
+}
+nav ul {
+  list-style-type: none;
+  width: 100%;
+  padding: 0px 0px;
+  overflow: hidden;
+  margin: 0;
+  float: left;
+}
+nav li {
+  list-style-type: none;
+  float: right;
+  text-align: center;
+}
+nav li a, nav li a:active, nav li a:link, nav li a:visited {
+  display: block;
+  padding: 10% 0% 10% 0%;
+  width: 160px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.8rem;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  border: 0;
+}
+nav li a:hover, nav li a:active:hover, nav li a:link:hover, nav li a:visited:hover {
+  color: #BA0707;
+}
+nav li .active {
+  font-weight: 600;
+  background-color: #BA0707;
+}
+
+section {
+  text-align: center;
+  width: 100%;
+}
+
+#headerImage {
+  background: #1f201a url("../images/side.jpg") no-repeat left center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+#headerImage .tripAdvisor {
+  width: 190px;
+  margin: auto;
+  padding-top: 5%;
+  text-align: center;
+}
+#headerImage .tripAdvisor a {
+  border-bottom: none;
+  text-decoration: none;
+}
+#headerImage #logo {
+  padding: 3%;
+}
+#headerImage .sichuan {
+  width: 40%;
+  float: left;
+  min-height: 80%;
+}
+#headerImage .content {
+  min-width: 80%;
+}
+#headerImage .content .phone, #headerImage .content i {
+  margin-left: 2%;
+  color: #ffffff;
+  font-size: 1.4rem;
+}
+#headerImage .rightContent {
+  margin-top: 0;
+  top: 20%;
+  float: right;
+  color: #ffffff;
+  text-align: center;
+  width: 40%;
+  padding: 10% 4% 4% 4%;
+}
+
+.button, button[type=submit] {
+  background: #BA0707;
+  width: 200px;
+  padding: 14px 3px 14px 3px;
+  margin: 4% auto 2% auto;
+  border-radius: 10px;
+  transition: all 0.4s linear;
+  border: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 300;
+}
+.button a, .button a:active, .button a:link, .button a:visited, button[type=submit] a, button[type=submit] a:active, button[type=submit] a:link, button[type=submit] a:visited {
+  color: #ffffff;
+  letter-spacing: 1px;
+  display: block;
+  border: none;
+}
+.button span, button[type=submit] span {
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s;
+}
+.button span:after, button[type=submit] span:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: -9px;
+  right: -10px;
+  transition: 0.5s;
+  font-size: 1.5rem;
+}
+.button:hover, button[type=submit]:hover {
+  background-color: #620404;
+  color: #ffffff;
+  transition: all 0.4s linear;
+  text-transform: uppercase;
+}
+.button:hover span, button[type=submit]:hover span {
+  padding-right: 25px;
+}
+.button:hover span:after, button[type=submit]:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#address {
+  margin: auto;
+  padding: 0.5% 0 0.5% 0;
+  background-color: #BA0707;
+  color: #ffffff;
+}
+
+#introduction {
+  text-align: center;
+  position: relative;
+  color: #1f201a;
+  margin: 5% auto 5% auto;
+}
+#introduction .introCopy {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto 5% auto;
+  font-weight: 500;
+}
+#introduction img {
+  padding-top: 10%;
+}
+#introduction .icon1, #introduction .icon2, #introduction .icon3 {
+  min-width: 106.6666666667px;
+  display: inline-block;
+  width: 220px;
+  height: 220px;
+  margin: 10px;
+}
+#introduction input, #introduction textarea, #introduction input[type=name], #introduction input[type=email] {
+  color: #1f201a;
+  border-color: #1f201a;
+  min-width: 210px;
+}
+#introduction textarea {
+  color: #1f201a;
+  height: 200px;
+}
+
+#tilesImage {
+  margin: 10% auto -5% auto;
+  text-align: center;
+  position: relative;
+  color: #1f201a;
+}
+#tilesImage .option1, #tilesImage .option2, #tilesImage .option3 {
+  width: 31%;
+  float: left;
+  display: inline-block;
+  text-align: left;
+  margin: auto 10px auto 10px;
+}
+
+#bookingCopy {
+  background-color: #EDEDED;
+  width: 100%;
+  padding: 5% 0 5% 0;
+  font-weight: 500;
+}
+
+#secondaryContent {
+  margin: auto;
+  text-align: left;
+  position: relative;
+  margin: 10% auto 10% auto;
+}
+#secondaryContent .wrapper {
+  margin: auto;
+}
+#secondaryContent .history {
+  float: left;
+  width: 66%;
+  text-align: left;
+  padding: 5px;
+  display: inline-block;
+}
+#secondaryContent .openingHours {
+  width: 30%;
+  padding: 5px;
+  float: right;
+}
+
+.map {
+  overflow: hidden;
+  padding-bottom: 50%;
+  position: relative;
+}
+.map iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+input, textarea, input[type=name], input[type=email] {
+  font-family: "Source Sans Pro", Helvetica, Verdana, sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 10px 20px 10px 20px;
+  width: 50%;
+  margin-top: 1%;
+  border: 3px solid #ffffff;
+  background: none;
+  display: inline-block;
+}
+
+input[type=submit] {
+  width: auto !important;
+}
+
+#emailForm {
+  background: #1f201a url("../images/footer.jpg") no-repeat left bottom fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+}
+#emailForm .wrapper {
+  padding: 10%;
+}
+#emailForm textarea {
+  height: 200px;
+}
+#emailForm h1 {
+  color: #ffffff;
+}
+
+footer {
+  text-align: center;
+  background-color: #1f201a;
+  color: #ffffff;
+  font-size: 20px;
+  border: none;
+  padding: 2% 0 0% 0;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+footer .backToTop {
+  width: 100%;
+  display: block;
+  padding: 1% 0% 3% 0%;
+}
+footer .backToTop a, footer .backToTop a:active, footer .backToTop a:link, footer .backToTop a:visited {
+  color: #BA0707;
+  letter-spacing: 3px;
+}
+footer a, footer a:active, footer a:link, footer a:visited {
+  font-size: 20px;
+  border: none;
+  font-weight: 500;
+  color: #BA0707;
+}
+
+@media (min-width: 1281px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  #headerImage .sichuan {
+    padding: 0px;
+    float: left;
+    width: 40%;
+    min-height: 80%;
+    width: 100%;
+  }
+  #headerImage .rightContent {
+    margin-top: 0;
+    width: 40%;
+    float: right;
+    color: #ffffff;
+    text-align: center;
+    padding: 2%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  #tilesImage .option1, #tilesImage .option2, #tilesImage .option3 {
+    width: 30%;
+    float: left;
+    display: inline-block;
+    text-align: left;
+    margin: auto 10px auto 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #tilesImage .option1, #tilesImage .option2, #tilesImage .option3 {
+    width: 100%;
+    display: block;
+    padding: 0;
+  }
+
+  #emailForm input, #emailForm textarea, #emailForm input[type=name], #emailForm input[type=email], #emailForm button[type=submit] {
+    width: 450px;
+    margin-bottom: 10px;
+  }
+
+  #headerImage #logo {
+    display: none;
+  }
+  #headerImage .rightContent {
+    margin-top: 0;
+    background-color: #1c1d17;
+    background-color: rgba(31, 32, 26, 0.9);
+    width: 100%;
+    padding: 15px 0 20px 0;
+    margin: 0 auto auto auto;
+    top: 0px;
+  }
+  #headerImage .sichuan {
+    display: none;
+  }
+
+  #introduction .icon1, #introduction .icon2, #introduction .icon3 {
+    min-width: 100px;
+    display: inline-block;
+    width: 26.6666666667%;
+    margin: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  nav {
+    background-color: #1f201a;
+  }
+  nav li {
+    background-color: #1f201a;
+  }
+
+  #tilesImage .option1, #tilesImage .option2, #tilesImage .option3 {
+    width: 100%;
+    display: block;
+    padding: 0;
+  }
+
+  #secondaryContent {
+    margin: 10% auto 5% auto;
+  }
+  #secondaryContent .history {
+    width: 100%;
+    display: block;
+    padding: 0;
+  }
+  #secondaryContent .openingHours {
+    width: 100%;
+    display: block;
+    padding: 0;
+  }
+
+  #introduction .icon1, #introduction .icon2, #introduction .icon3 {
+    min-width: 100px;
+    display: inline-block;
+    width: 26.6666666667%;
+    margin: 10px;
+  }
+
+  #emailForm input, #emailForm textarea, #emailForm input[type=name], #emailForm input[type=email], #emailForm button[type=submit] {
+    width: 450px;
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  #logo {
+    display: none;
+  }
+
+  .rightContent {
+    background-color: #1c1d17;
+    background-color: rgba(31, 32, 26, 0.9);
+    margin: 0;
+    padding: 0;
+  }
+
+  #introduction .icon1, #introduction .icon2, #introduction .icon3 {
+    min-width: 100px;
+    display: inline-block;
+    width: 26.6666666667%;
+    margin: 10px;
+  }
+
+  #tilesImage .option1, #tilesImage .option2, #tilesImage .option3 {
+    width: 100%;
+    display: block;
+    padding: 0;
+  }
+
+  #secondaryContent {
+    margin: 10% auto 5% auto;
+  }
+  #secondaryContent .history {
+    width: 100%;
+    display: block;
+    padding: 0;
+  }
+  #secondaryContent .openingHours {
+    width: 100%;
+    display: block;
+    padding: 0;
+  }
+
+  #emailForm input, #emailForm textarea, #emailForm input[type=name], #emailForm input[type=email], #emailForm button[type=submit] {
+    width: 400px;
+  }
+
+  nav {
+    background-color: #1f201a;
+  }
+  nav li {
+    background-color: #1f201a;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  #headerImage {
+    top: 0px;
+  }
+  #headerImage #logo {
+    display: none;
+  }
+  #headerImage .rightContent {
+    background-color: #1c1d17;
+    background-color: rgba(31, 32, 26, 0.9);
+    width: 100%;
+    padding: 20px 0 20px 0;
+    margin: 0 auto auto auto;
+  }
+  #headerImage .sichuan {
+    display: none;
+  }
+
+  #tilesImage .option1 {
+    display: inline-block;
+    width: 80%;
+  }
+
+  #emailForm input, #emailForm textarea, #emailForm input[type=name], #emailForm input[type=email], #emailForm button[type=submit] {
+    width: 320px;
+    margin-bottom: 10px;
+  }
+
+  #secondaryContent {
+    margin: 10% auto auto auto;
+  }
+  #secondaryContent .history {
+    width: 100%;
+    display: block;
+    padding: 0;
+  }
+  #secondaryContent .openingHours {
+    width: 100%;
+    display: block;
+    padding: 0;
+    margin-bottom: 20%;
+  }
+
+  #tilesImage .option1, #tilesImage .option2, #tilesImage .option3 {
+    width: 100%;
+    display: block;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 620px) {
+  nav {
+    color: #ffffff;
+    width: 100%;
+  }
+  nav ul {
+    list-style-type: none;
+    width: 100%;
+    padding: 0px 0px;
+    overflow: hidden;
+    margin: 0;
+    float: none;
+  }
+  nav li {
+    list-style-type: none;
+    float: none;
+    width: 100%;
+    background-color: #1f201a;
+  }
+  nav li a, nav li a:active, nav li a:link, nav li a:visited {
+    display: inline-block;
+    padding: 5% 0% 5% 0%;
+    width: 100%;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    border-bottom: 3px solid #ffffff;
+    text-align: center;
+  }
+}
+/* 
+END OF STYLESHEET
+*/
+
+/*# sourceMappingURL=css/sass.css.map */
